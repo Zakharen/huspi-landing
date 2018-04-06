@@ -1,0 +1,386 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+* {margin:0;padding:0}
+html, body{min-height:100%;height:100%}
+body{background-color:#fff;color:#2a2c33;font-family:'Open Sans', sans-serif;font-weight:300;font-size:14px;line-height:1.4;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+a, a:hover{text-decoration:none}
+a{color:#e6494b;-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;transition:all 0.2s linear}
+a:hover{color:#B4161B}
+*:focus{outline:none}
+img{border:none;display:block}
+ul li{list-style:none}
+textarea{resize:none}
+input,textarea{background-color:transparent;border:none;border-bottom:1px solid #e0e0e0;color:#2a2c33;font-family:'Open Sans', Arial, Helvetica, sans-serif;font-size:14px;font-weight:400;height:38px;margin:0 0 20px;padding:0;width:100%}
+textarea{margin:0 0 40px}
+button{background:none;border:1px solid transparent;color:#2a2c33;height:36px;padding:0 40px}
+button:active, button:focus{outline:0}
+::-webkit-input-placeholder{color:#999;font-weight:400}
+::-moz-placeholder{color:#999;font-weight:400}
+:-moz-placeholder{color:#999;font-weight:400}
+:-ms-input-placeholder{color:#999;font-weight:400}
+
+h1, h2, h3, h4, h5, h6 {font-family:"Open Sans", sans-serif;font-weight:normal;margin:0;line-height:1.4}
+h1{color:#e6494b;font-size:36px;font-weight:700;margin:0 0 40px}
+h2{color:#e6494b;font-size:24px;font-weight:700;margin:0 0 45px;text-transform:uppercase}
+h3{font-size:30px;line-height:1.33;margin:0 0 50px}
+
+.bold{font-weight:700}
+.reg{font-weight:400}
+.red{color:#e6494b}
+.black{color:#000}
+.no-margin{margin:0}
+.no-transform{text-transform:none}
+
+.section{padding:160px 0 0}
+.btn{border-radius:0;font-size:14px;line-height:1.4;padding:7px 42px;-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;transition:all 0.2s linear}
+.btn-red{border-color:#e6494b;color:#e6494b}
+.btn-red:hover{background-color:rgba(232,73,75,.1);color:#e6494b}
+.btn-blue{border-color:#1c6cb3;color:#1c6cb3}
+.btn-blue:hover{background-color:rgba(28,108,179,.1);color:#142F49}
+.btn-white{border-color:#fff;color:#fff;padding:7px 33px}
+.btn-white:hover{background-color:rgba(255,255,255,.2);color:#fff}
+.btn.focus, .btn:focus{box-shadow:none}
+.title-row{font-size:18px;font-weight:700;margin:0 0 20px}
+.subtitle-row{color:#000;font-size:24px;margin:0 0 40px}
+.more{font-size:12px;font-weight:700;position:relative}
+.more:before{background-color:#d3dcde;content:'';display:block;width:0;height:2px;position:absolute;bottom:-3px;right:0}
+.more:hover:before{width:100%;-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;transition:all 0.2s linear}
+.more .fa, .more .fas{color:#2a2c33;position:absolute;top:4px;right:-14px}
+.border-block-red{position:relative;-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;transition:all 0.2s linear}
+.border-block-red:before{border:4px solid #e6494b;background-color:transparent;content:'';display:block;width:100%;height:100%;position:absolute;top:0;left:0;-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;transition:all 0.2s linear}
+.border-block-red:hover:before{border-width:8px}
+.border-list li{border-bottom:1px solid #e0e0e0;padding:15px 0}
+.hidden-block{border-top:1px solid #e0e0e0;padding:15px 0 0}
+div[class*="col-lg-"]{-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;transition:all 0.2s linear}
+
+.menu-container{background-color:rgba(20,47,73,.6);display:block;width:100%;height:81px;padding:0;position:fixed;top:0;left:0;z-index:20}
+.menu-container .container, .menu, .navbar-nav{height:100%}
+.logo-menu{margin:0 0 0 100px}
+.menu{justify-content:flex-end}
+.navbar-nav li{padding:0 17px}
+.navbar-nav > li > a{color:#fff;display:block;position:relative;padding:31px 0}
+.navbar-nav li:hover > a:before, .navbar-nav .active > a:before{background-color:#e6494b;content:'';display:block;height:4px;width:100%;position:absolute;top:0;left:0}
+.navbar-nav li:hover > a, .navbar-nav > li > a:focus{color:#E6494B}
+.navbar-nav .active > a{color:#E6494B;font-weight:700}
+.btn-start{background-color:transparent;border:1px solid #e6494b;border-radius:0;color:#fff;font-weight:400;height:47px;line-height:45px;margin:0 0 0 33px;padding:0;width:212px;-webkit-transition:all 0.5s linear;-moz-transition:all 0.5s linear;transition:all 0.5s linear}
+.btn-start-fixed{position:fixed;right:10px;bottom:10px;background-color:#fff;color:#2a2c33;margin:0;z-index:20}
+.btn-start:hover{background-color:#e6494b;color:#fff;font-weight:600}
+.navbar-toggler{margin:20px 15px 20px 0;padding:9px 10px;}
+.navbar-toggler .icon-bar{background-color:#fff;display:block;width:22px;height:2px;margin:0 0 4px;border-radius:1px;}
+
+.main-section{position:relative}
+#video-background {position:absolute;right:0;bottom:0;min-width:100%;min-height:100%;width:auto;height:auto;z-index:-100;}
+
+.landing-main{background-color:rgba(20,47,73,.43);color:#fff;padding:160px 0 85px}
+.landing-main_h3{font-weight:600;margin:0 0 40px}
+.landing-main_column{max-width:360px}
+.landing-main_slogan{color: #e6494b;font-size:18px;margin:0;padding:65px 0 0}
+
+.landing-about .subtitle-row + .title-row{margin:0 0 40px}
+.landing-about_big{padding-top:80px}
+.landing-about_big .subtitle-row{margin:0 0 20px}
+.landing-about_big .subtitle-row + p{margin:0 0 45px}
+
+.steps{color:#2a2c33;margin-bottom:160px;position:relative}
+.steps:before{background-color:#ececec;content:'';display:block;width:2px;height:100%;position:absolute;top:0;left:27px}
+.steps-one{padding:40px 0 0 101px;position:relative}
+.steps-one:first-child{padding-top:0}
+.steps-one_number{background-color:#fff;border:solid 1px #e6494b;border-radius:50px;display:block;width:50px;height:50px;position:absolute;left:3px;top:75px;font-size:18px;font-weight:700;color:#e6494b;text-align:center;line-height:48px}
+.steps-one:first-child .steps-one_number{top:35px}
+.steps-one_text{margin-bottom:20px}
+.steps-one .hidden-block{color:#000;font-size:12px;line-height:1.8;}
+
+.landing-business{margin:0 0 -40px}
+.landing-business_one{margin:0 0 40px;position:relative;text-align:center}
+.landing-business_pic{height:310px;overflow:hidden}
+.landing-business_pic img{width:100%}
+.landing-business_info{display:flex;flex-direction:column;justify-content:center;align-items:center;position:absolute;top:0;lefT:0;width:100%;height:100%;background-color:rgba(20,47,73,.9);color:#fff;opacity:0;-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;transition:all 0.2s linear}
+.landing-business_one:hover .landing-business_info{opacity:1}
+.landing-business_content{max-width:320px}
+.landing-business_name{font-size:24px;font-weight:700;margin:0 0 20px}
+.landing-business_text{margin:0 0 35px}
+.landing-business_one .btn{border:2px solid #fff;color:#fff}
+.landing-business_one .btn:hover{background-color:rgba(255,255,255,.3)}
+
+.result{color:#000;font-weight:400;padding:40px 100px}
+.result-title{font-size:28px;margin-bottom:20px;text-align:center}
+.result ul{margin:0}
+.result li{padding:0 0 10px}
+
+.landing-team_photo{height:310px;margin:0 0 40px;overflow:hidden;position:relative}
+.landing-team_photo img{height:100%;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;transition:all 0.3s linear}
+.landing-team .landing-team_photo img{position:absolute;top:0;left:50%;transform:translateX(-50%)}
+.landing-team .landing-team_photo:hover img{height:105%;top:-2.5%;}
+.landing-team_name{font-size:16px;font-weight:700;margin:0 0 10px}
+.landing-team_position{font-size:12px;margin:0 0 40px}
+
+.landing-service_main{background-color:#eff2f3;margin:0 0 50px;padding:65px 100px}
+.landing-service_main .title-row{margin:0 0 40px}
+.landing-service_slogan{line-height:1.8}
+.landing-service_main ul{font-size:12px}
+.landing-service_main .border-list{line-height:1.67}
+.landing-service_text{font-size:12px;line-height:1.8;padding:40px 0}
+.landing-service_text p:first-child{margin:0 0 40px}
+.landing-service_text .bordered{border-left:8px solid #e95f60;margin:0;padding-left:15px}
+.landing-service_blocks{padding:0 0 130px;position:relative}
+.landing-service_h-one, .landing-service_v-one{height:100%;padding:0 0 50px}
+.landing-service_h-one_inside, .landing-service_v-one_inside{background-color:#eff2f3;font-size:12px;height:100%;margin:0;padding:50px 60px 50px 200px;position:relative;transform:scale(1);-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;transition:all 0.3s linear}
+.landing-service_h-one_inside:hover, .landing-service_v-one_inside:hover{transform:scale(1.025);}
+.landing-service_icon{display:block;width:100px;height:100px;margin:0 0 18px}
+.landing-service_icon img{width:100%}
+.landing-service_h-one_inside .landing-service_icon{position:absolute;top:50px;left:60px}
+.landing-service_h-one_inside .title-row, .landing-service_v-one .title-row{margin:0 0 30px;max-width:304px}
+.landing-service_start{line-height:1.67;margin:0 0 20px}
+.landing-service_start p{margin:0}
+.landing-service_v-one_inside{padding:32px 60px}
+.bg-opacity{background-color:rgba(255,255,255,.4);display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:5}
+.landing-service_popup{background-color:#eff2f3;box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.5), 2px 2px 8px 0 rgba(0, 0, 0, 0.5);margin-top:-40px;width:760px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10}
+.landing-service_popup .landing-service_h-one_inside{padding-right:100px}
+.landing-service_v-one + .landing-service_popup{margin-top:-25px}
+
+.landing-why h2+.title-row{margin:0 0 25px}
+.landing-why_intro{color:#000;line-height:1.7}
+.landing-why_item{border-bottom:1px solid #e0e0e0;color:#000;margin:0 0 20px;padding:0 0 10px}
+.landing-why_row{margin:0 0 15px}
+.landing-why_item .hidden-block{font-size:13px;position:relative}
+.landing-why_item .hidden-block:after{background-color:#fff;content:'';display:block;width:100%;height:1px;position:absolute;left:0;bottom:-11px}
+.landing-why_number{color:#e6494b;display:block;font-size:36px;font-weight:700}
+
+.landing-believe h2{color:#000;margin:0 0 75px}
+.landing-believe_one{height:100%;padding:0 0 40px}
+.landing-believe_one-inside{border:4px solid #eff2f3;font-size:13px;height:100%;padding:65px 55px;-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;transition:all 0.2s linear}
+.landing-believe_one-inside:hover{border-color:#e6494b}
+.landing-believe_step{color:#D9DADA;font-size:12px;font-weight:700;line-height:1;margin:0 0 25px}
+.landing-believe_step span{display:inline-block;vertical-align:top;margin:0 -3px 0 0;position:relative}
+.landing-believe_step .all{padding-left:6px;margin-left:6px}
+.landing-believe_step .all:before{background-color:#D9DADA;content:'';display:block;width:1px;height:100%;position:absolute;top:0;left:0}
+.landing-believe_text{height:63px;line-height:1.62;margin:0 0 25px;overflow:hidden}
+
+.landing-offer{margin:40px 0 0;padding:65px 200px}
+.landing-offer_title{color:#000;font-size:24px;font-weight:600;margin:0 0 40px}
+.landing-offer li{padding:10px 0}
+
+.landing-experience h2{font-size:36px;margin:0 0 80px;text-align:center;text-transform:none}
+.landing-experience_slogan{font-size:18px;font-weight:400;margin:0 0 70px}
+.landing-experience_text{color:#000;font-size:12px;line-height:1.8;margin:0 0 20px}
+
+.landing-categories{padding:160px 0 130px;position:relative}
+.landing-categories_one{background-color:#f7f8f9;font-size:12px;height:100%;margin:0 0 30px;padding:30px 60px;transform:scale(1);-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;transition:all 0.3s linear}
+.landing-categories_one:hover{transform:scale(1.025);}
+.landing-categories_text{line-height:1.66;margin:0 0 25px}
+.landing-categories_one-big{background-color:#fff;box-shadow:1px 2px 4px 0 rgba(0, 0, 0, 0.5);border:solid 4px #eff2f3;padding:40px 50px;width:760px;height:500px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10}
+.close-small{color:#000;cursor:pointer;display:block;height:14px;width:14px;opacity:.4;position:absolute;top:10px;right:10px}
+.landing-categories_one-big_left{font-size:12px;line-height:1.67}
+.landing-categories_one-big_right{font-size:12px}
+.landing-categories_one-bug_right .reg{font-size:16px;}
+
+.landing-digital{background-color:#f7f8f9;padding:80px 0}
+.landing-digital h2{font-size:36px;margin:0 0 70px;text-align:center;text-transform:none}
+.landing-digital_slogan{line-height:1.6;margin:0 0 20px}
+.landing-digital_slogan .reg{color:#000}
+.landing-digital .title{font-size:18px;font-weight:400}
+.landing-digital .border-list{font-size:12px;line-height:1.8}
+.landing-digital .hidden-block p{line-height:1.5;margin:0 0 15px}
+
+.landing-contacts{padding:160px 0 150px}
+.landing-contacts h2{font-size:30px;text-transform:none}
+
+.footer{background-color: #142f49;color:#fff;padding-bottom:42px}
+.footer a{color:#fff;position:relative}
+.footer-left{font-size:12px;padding-top:42px;position:relative}
+.footer-title{color:#e6494b;font-size:20px;font-weight:700;margin:0 0 35px}
+.footer-address{font-size:16px;margin:0 0 20px}
+.footer-address ul{margin:0 0 20px}
+.footer-address li{margin:20px 0 0}
+.footer-address li:first-child{margin:0}
+.footer-address li a:before{background-color:rgba(255,255,255,.5);content:'';display:block;width:0;height:2px;position:absolute;bottom:-2px;right:0}
+.footer-address li a:hover:before{width:100%;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;transition:all 0.3s linear}
+.footer-left a{display:inline-block;margin-right:40px}
+.footer .fab{font-size:29px}
+.footer-right{padding-top:42px}
+
+.carousel-indicators{position:relative;bottom:auto;left:0;width:100%;margin:40px 0 0;padding-left:165px;justify-content:flex-start}
+.carousel-indicators li{background-color:#d0d5db;border:none;margin:0 5px;width:11px;height:11px;vertical-align:top}
+.carousel-indicators .active{background-color:#e6494b;margin:0 5px}
+.landing-reviews{background-color:#e6494b;color:#fff;padding:80px 0 60px}
+.landing-reviews_one{padding-left:170px;position:relative}
+.author-pic{border-radius:100px;width:100px;height:107px;overflow:hidden;margin:0}
+.author-pic img{height:100%}
+.landing-reviews_one .author-pic{position:absolute;top:10px;left:0}
+.landing-reviews_text{font-size:18px;line-height:1.67;margin:0 0 30px}
+.landing-reviews_author .name{display:inline-block;font-weight:700;padding-right:50px;vertical-align:top}
+.landing-reviews_author .job{display:inline-block;font-size:12px;padding-left:29px;vertical-align:top;position:relative}
+.landing-reviews_author .job:before{background-color:#fff;content:'';display:block;height:100%;width:1px;position:absolute;top:0;left:0}
+.landing-reviews .carousel-indicators li{background-color:#fff;border-radius:20px;width:10px;height:10px;vertical-align:middle}
+.landing-reviews .carousel-indicators .active{border:2px solid #fff;background-color:transparent;height:15px;width:15px}
+
+.modal-open, .modal-open .modal{padding:0 !important}
+.modal-open .modal{background-color:#fff}
+.modal .close{font-size:56px;font-weight:400;margin:0;padding:0;position:fixed;top:0;right:35px;text-shadow:none;z-index:30}
+.modal-dialog{background-color:#fff;margin:0;max-width:none}
+.modal-content{border-radius:0;border:none}
+.modal-header{background-color:#1c6cb3;border:none;border-radius:0;color:#fff;display:block;padding:25px 16px}
+.modal-header .container{position:relative}
+.modal-title{font-size:36px;font-weight:700}
+.modal-body{padding:47px 0 84px}
+.modal-subtitle{font-size:18px;font-weight:600;margin:0 0 34px}
+.modal-business .close{top:21px}
+.modal-business_row{margin:0 0 90px}
+.modal-business_column{color:#000;line-height:1.7;padding-right:10px}
+.modal-dialog .border-list{font-size:12px}
+.modal-business .border-list li:first-child{padding-top:0}
+.modal-dialog h5{font-size:24px;font-weight:700;margin:0 0 50px}
+.modal-cell{height:100%;padding:0 0 31px}
+.modal-cell_block{border:4px solid #f7f7f7;height:100%;padding:45px 56px}
+.modal-cell_block .number{color:#1c6cb3;display:block;font-size:36px;font-weight:700;margin:0 0 30px}
+.modal-business .btn{margin:30px 0 0;width:240px}
+.modal-footer{justify-content:center}
+.modal-footer a{font-weight:600}
+.modal-footer a i{vertical-align:middle}
+
+.modal-personal .modal-dialog{padding:15px 45px}
+.border-container{border:4px solid #E8494B;padding-top:107px;padding-bottom:107px}
+.modal-personal_left{max-width:363px;margin:0 auto}
+.modal-personal_left .landing-team_photo{height:363px}
+.modal-personal_right{padding-right:30px}
+.personal-main{line-height:1.7;margin:0 0 60px}
+
+.hide{display:none}
+
+/* media styles */
+@media screen and (min-width: 1200px) {
+    .container{max-width:1190px}
+    .container-small{max-width:990px}
+}
+
+@media screen and (max-width: 1345px) {
+    .modal-personal .close {right:15px}
+}
+
+@media screen and (max-width: 1199px) {
+    .logo-menu{margin-left:0}
+    .landing-business_pic{height:249px}
+    .landing-team_photo{height:251px}
+}
+
+@media screen and (max-width:991px) {
+    .landing-reviews .col-lg-2{display:none}
+    .navbar-nav li{padding:0 10px}
+    .btn-start{margin:0 0 0 5px;width:190px}
+    .btn-start-fixed{margin:0;width:auto;padding:0 10px}
+    .landing-offer{padding:65px 100px}
+    .landing-business_pic{height:183px}
+    .landing-business_name{font-size:20px;margin:0 0 10px}
+    .landing-business_text{margin:0 0 15px}
+    .landing-team_item{margin:0 0 50px}
+    .landing-team .landing-team_photo{height:310px}
+    .landing-team .landing-team_photo img{position:relative}
+    .landing-service_main{padding:65px}
+    .landing-service_h-one_inside, .landing-service_v-one_inside{padding:50px 55px 50px 180px}
+    .landing-service_icon, .landing-service_h-one_inside .landing-service_icon{position:absolute;top:50px;left:50px}
+    .landing-service_popup, .landing-categories_one-big{width:690px;margin-top:0}
+    .landing-categories_one-big{height:auto;top:0;transform:translate(-50%,0);}
+    .landing-service_blocks .position-static, .landing-categories .position-static{position:relative !important;}
+    .landing-categories_one{height:auto}
+    .border-container{padding-top:50px;padding-bottom:50px}
+    .modal-cell_block{padding:35px}
+}
+
+@media screen and (max-width:767px) {
+    .container{max-width:none}
+    .navbar-collapse{background-color:rgba(20,47,73,.6);text-align:right}
+    .menu{height:auto;margin:5px 0 0;padding:0 0 15px}
+    .navbar-nav li{padding:0 15px}
+    .navbar-nav li > a{padding:9px 0}
+    .logo-menu{margin-left:15px}
+    .btn-start{margin-right:15px}
+    .btn-start-fixed{margin:0}
+    .section{padding:100px 0 0}
+    .landing-main{padding-top:100px}
+    .result, .modal-cell_block{padding:40px 55px}
+    .steps{margin-bottom:100px}
+    .landing-business_pic{height:auto}
+    .landing-team_item{margin:0 0 40px;padding-left:305px;position:relative;overflow:hidden}
+    .landing-team .landing-team_photo{float:left;margin:0 0 0 -305px;max-width:260px}
+    .landing-service{padding-top:60px}
+    .landing-service_main, .landing-offer{padding:65px 55px}
+    .landing-service_blocks{padding:0 0 50px}
+    .landing-main_column{max-width:none}
+    .landing-categories{padding:100px 0 80px}
+    .landing-experience_text, .landing-digital .title{margin:40px 0 0}
+    .landing-contacts{padding:100px 0 90px}
+    .landing-contacts form, .modal-business_column{margin:0 0 40px}
+    .border-container{padding:40px}
+    .modal .close{font-size:34px}
+    .modal-business .close{top:3px;right:11px}
+    .modal-personal .modal-dialog{padding:15px}
+    .modal-personal .close{top:17px;right:24px}
+    .modal-personal_left{margin:0}
+    .modal-business_row{margin:0 0 50px}
+    .modal-dialog h5{margin-top:50px}
+}
+
+@media screen and (max-width: 719px) {
+    .landing-service_popup, .landing-categories_one-big{width:calc(100% - 30px)}
+    .landing-service_popup .landing-service_h-one_inside{padding-right:50px}
+}
+
+@media screen and (max-width:639px) {
+    textarea{min-height:60px}
+    h1, .landing-experience h2, .landing-digital h2{font-size:30px}
+    .result{padding:40px 45px}
+    .result-title, .landing-contacts h2{font-size:25px}
+    .landing-team_item{padding-left:280px}
+    .landing-team .landing-team_photo{margin-left:-280px}
+    .landing-service_main, .landing-offer{padding:65px 45px}
+    .landing-reviews_one{padding-left:130px}
+    .carousel-indicators{padding-left:125px}
+    .landing-reviews_text{font-size:16px}
+    .landing-reviews_author .name{display:block;margin:0 0 10px}
+    .landing-reviews_author .job{display:block;padding-left:0}
+    .landing-reviews_author .job:before{display:none}
+    .landing-experience h2, .landing-digital h2{margin:0 0 40px}
+    .landing-categories_one{padding:30px 45px}
+    .border-container{padding:25px 20px}
+}
+
+@media screen and (max-width: 599px) {
+    .landing-service_popup .landing-service_h-one_inside, .landing-categories_one-big{padding:20px}
+    .landing-service_popup .landing-service_h-one_inside .landing-service_icon{position:relative;top:auto;left:auto}
+}
+
+@media screen and (max-width:479px) {
+    h1, .landing-experience h2, .landing-digital h2{font-size:25px}
+    h2, .landing-believe h2, .landing-experience h2, .landing-digital h2, .landing-contacts h2{margin-bottom:25px}
+    .landing-main{padding-bottom:50px}
+    .section{padding:50px 0 0}
+    .steps{margin-bottom:50px}
+    .steps-one{padding-left:68px}
+    .result, .landing-service_main, .landing-offer, .landing-service_h-one_inside, .landing-service_v-one_inside, .landing-believe_one-inside, .landing-categories_one{padding:20px}
+    .landing-business_name{font-size:16px;margin:0 0 5px}
+    .landing-business_text{font-size:12px}
+    .landing-team_item{padding-left:0;display:flex;flex-flow:column;justify-content:center;align-items:center;}
+    .landing-team .landing-team_photo{float:none;margin:0 0 20px}
+    .landing-team_position{margin:0 0 10px}
+    .modal-personal_left .landing-team_photo{height:auto}
+    .modal-personal_left .landing-team_photo img{max-width:100%;height:auto}
+    .landing-service{padding-top:20px}
+    .landing-service_icon, .landing-service_h-one_inside .landing-service_icon, .landing-reviews_one .author-pic{position:relative;top:auto;left:auto}
+    .landing-reviews_one{padding-left:0}
+    .carousel-indicators{justify-content:center;padding-left:0}
+    .landing-reviews_one .author-pic{margin:0 0 20px}
+    .landing-offer_title{font-size:17px}
+    .landing-experience_slogan{font-size:16px;margin:0 0 20px}
+    .landing-reviews, .landing-categories, .landing-contacts{padding:50px 0 40px}
+    .landing-digital{padding:40px 0}
+    .landing-contacts h2{font-size:22px}
+    .modal-header{padding:16px 0}
+    .modal-title{font-size:30px}
+    .modal .close{font-size:26px}
+    .modal-personal .close{top:13px;right:23px}
+}
